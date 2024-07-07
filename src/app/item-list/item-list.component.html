@@ -1,0 +1,30 @@
+<h3>All Item Here..</h3>
+
+<!-- @defer(on viewport | on hover | when variable(true/false)){
+} -->
+
+@for(item of items; track i; let i = $index){ @defer (on viewport){
+<app-item></app-item>
+}@placeholder {
+<div class="placeholder"></div>
+}@loading {
+<div class="placeholder">Loading</div>
+}@error{
+<div class="error">Error..</div>
+} }
+
+<h3>When Click Then Load Component..</h3>
+
+<!-- @defer(on viewport | on hover | when variable(true/false)){
+
+} -->
+<input type="button" value="Click Me" (click)="clicked = true" />
+@for(item of items; track i; let i = $index){ @defer (when clicked){
+<app-item></app-item>
+}@placeholder {
+<div class="placeholder"></div>
+}@loading {
+<div class="placeholder">Loading</div>
+}@error{
+<div class="error">Error..</div>
+} }

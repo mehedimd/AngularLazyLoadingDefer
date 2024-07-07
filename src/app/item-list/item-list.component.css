@@ -1,0 +1,12 @@
+.placeholder {
+  width: 200px;
+  height: 100px;
+  background-color: gray;
+  padding: 10px;
+}
+.error {
+  width: 200px;
+  height: 100px;
+  background-color: red;
+  padding: 10px;
+}
